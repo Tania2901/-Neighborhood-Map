@@ -1,0 +1,145 @@
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	-o-box-sizing: border-box; 
+	box-sizing: border-box; 
+	-webkit-transition: .0s ease-in-out; 
+	-moz-transition: .0s ease-in-out; 
+	-o-transition: .0s ease-in-out; 
+	transition: .0s ease-in-out; 
+	margin: 0; 
+	padding: 0; 
+	-webkit-text-size-adjust: none; 
+} 
+
+html,
+body,
+#root {
+	height: 100%;
+}
+
+.App {
+  text-align: center;
+	height: 100%;
+}
+
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: #0485ff;
+}
+
+.App-title {
+  font-size: 3em;
+}
+
+.App-intro {
+  font-size: 3e;
+}
+
+#drawer-toggle { 
+	position: absolute; 
+	opacity: 0; 
+}
+
+#drawer-toggle-label { 
+	-webkit-touch-callout: none; 
+	-webkit-user-select: none; 
+	-khtml-user-select: none; 
+	-moz-user-select: none; 
+	-ms-user-select: none; 
+	user-select: none; 
+	left: 0px; 
+	height:50px; 
+	width: 50px; 
+	display: block; 
+	position: fixed; 
+	background: #0485ff; 
+	z-index: 2; 
+} 
+
+#drawer-toggle-label:before { 
+	content: ''; 
+	display: block; 
+	position: absolute; 
+	height: 2px; 
+	width: 24px; 
+	background: #0485ff; 
+	left: 13px; 
+	top: 18px; 
+	box-shadow: 0 6px 0 #0485ff, 0 12px 0 #0485ff; 
+} 
+
+header { 
+	width: 100%; 
+	position: fixed; 
+	left: 0px; 
+	background: #20b9ff; 
+	padding: 10px 10px 10px 50px; 
+	font-size: 30px; 
+	line-height: 30px; 
+}
+
+#drawer { 
+	position: fixed; 
+	top: 0; 
+	left: -300px; 
+	height: 100%; 
+	width: 300px; 
+	background: #0485ff; 
+	overflow-x: hidden; 
+	overflow-y: scroll; 
+	padding: 20px; 
+	-webkit-overflow-scrolling: touch; 
+} 
+
+#drawer-toggle:checked ~ #drawer-toggle-label { 
+	height: 100%; 
+	width: calc(100% - 300px); 
+	background: #0485ff; 
+} 
+
+#drawer-toggle:checked ~ #drawer-toggle-label, 
+#drawer-toggle:checked ~ header { 
+	left: 300px; 
+} 
+
+#drawer-toggle:checked ~ #drawer { 
+	left: 0px; 
+} 
+
+#drawer-toggle:checked ~ #map { 
+	margin-left: 300px; 
+}
+
+#map {
+	height: 100%;
+}
+
+
+#filterInput {
+	font-size: 18px;
+	height: 12px;
+	padding: 16px;
+	width: 100%;
+}
+
+#filter {
+	font-size: 18px;
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+.result {
+	border: 1px solid #ddd; 
+	margin-top: -1px; 
+	background-color: #f6f6f6; 
+	padding: 12px; 
+	color: black; 
+	display: block; 
+}
+
+
